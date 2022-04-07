@@ -53,67 +53,65 @@ ul {
     background-color: rgba(41, 52, 73, 0.02);
 }
 
-.header-top {
+.header-top-wrapper {
     background-color: var(--black-blue);
     font-size: 18px;
     line-height: 24px;
 }
 
-.header-top-list {
-    display: grid;
-    grid-template-columns: min-content 1fr min-content min-content min-content;
+.header-top {
+    display: flex;
     height: 42px;
+}
+
+.header-top-left {
+    display: flex;
+    align-items: center;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.header-top-right {
+    display: flex;
     align-items: center;
 }
 
-.header-top-list p {
+.header-top-btn p {
     margin: 0;
 }
 
-.header-top-list svg {
+.header-top svg {
     align-self: center;
     padding-left: 9px;
     padding-right: 9px;
 }
 
 /*хедер - кнопка "Техномарт*/
-.header-top-list-title {
+.header-top-title {
     background-color: var(--basic-red);
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
-    border-bottom: 5px;
-    border-color: rgb(181, 41, 51);
-    border-style: solid;
+    border: 0;
+    border-bottom: 5px solid rgb(181, 41, 51);
     padding-left: 56px;
     padding-right: 56px;
     text-transform: uppercase;
     height: 100%;
     display: flex;
+    align-items: center;
 }
 
-.header-top-list-title a {
-    align-self: center;
-}
-
-.header-top-list-title:active {
+.header-top-title:active {
     background-color: #ba2732;
     border-color: #8d1e26;
 }
 
-/*класс для кнопок навигации*/
-.header-top-list-btn {
-    display: flex;
-}
-
 /*кнопка поиск*/
-.header-top-list-search {
+.header-top-search {
     display: flex;
     height: 100%;
     align-items: center;
 }
 
-.header-top-list-search a {
+.header-top-search {
     fill-opacity: 0.3;
     fill: var(--white);
     height: 100%;
@@ -121,12 +119,12 @@ ul {
     align-items: center;
 }
 
-.header-top-list-search a:hover {
+.header-top-search:hover {
     fill-opacity: 1;
     fill: #ffffff;
 }
 
-.header-top-list-search a:focus {
+.header-top-search:focus {
     fill-opacity: 1;
     fill: var(--basic-red);
     color: #000000;
@@ -134,7 +132,7 @@ ul {
     
 }
 
-.header-top-list-search a:active {
+.header-top-search:active {
     fill-opacity: 0.3;
     fill: var(--white);
     background-color: var(--black-blue);
@@ -142,71 +140,52 @@ ul {
 }
 
 /*хедер - кнопка закладки и корзина*/
-.header-top-list-bookmarks,
-.header-top-list-cart {
+.header-top-bookmarks,
+.header-top-cart {
     height: 100%;
     display: flex;
     align-items: center;
-}
-
-.header-top-list-bookmarks a,
-.header-top-list-cart a {
     fill-opacity: 0.3;
     fill: var(--white);
-    white-space: nowrap;
     padding-right: 26px;
 }
 
-.header-top-list-bookmarks a:hover,
-.header-top-list-cart a:hover {
+.header-top-bookmarks:hover,
+.header-top-cart:hover {
     fill-opacity: 1;
     fill: var(--white);
 }
 
-.header-top-list-bookmarks:active,
-.header-top-list-cart:active {
+.header-top-bookmarks:active,
+.header-top-cart:active {
     background-color: #161D29;
-}
-
-.header-top-list-bookmarks a:active,
-.header-top-list-cart a:active {
     fill-opacity: 0.3;
     fill: var(--white);
     color: rgba(255, 255, 255, 0.3);
 }
 
 /*хедер - кнопка оформить заказ*/
-.header-top-list-order {
+.header-top-order {
     background-color: var(--basic-green);
-    white-space: nowrap;
     display: flex;
     padding-left: 19px;
     padding-right: 16px;
     height: 100%;
+    align-items: center;
 }
 
-.header-top-list-order:hover {
+.header-top-order:hover {
     background-color: #5fbb2d;
 }
 
-.header-top-list-order:focus {
-    background-color: var(--basic-red);
-}
-
-.header-top-list-order:active {
+.header-top-order:focus {
     background-color: var(--basic-green);
-    color: #222222;
-}
-
-.header-top-list-order a {
-    align-self: center;
-}
-
-.header-top-list-order a:focus {
     color: var(--white);
 }
 
-.header-top-list-order a:active {
+.header-top-order:active {
+    background-color: var(--basic-green);
+    color: #222222;
     color: #b1d39e;
 }
 
@@ -216,12 +195,25 @@ ul {
     justify-content: space-between;
 }
 
+.page-title {
+    line-height: 23px;
+    text-align: left;
+    font-style: italic;
+    display: flex;
+    font-size: 16px;
+    color: var(--basic-red);
+    align-items: center;
+    padding-left: 30px;
+}
+
 .header-middle-contacts {
     display: flex;
     align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.header-middle-contacts-box a {
+.header-middle-contacts-phone {
     font-size: 21px;
     line-height: 30px;
     font-weight: 700;
@@ -232,32 +224,17 @@ ul {
     display: flex;
 }
 
-.header-middle-contacts-box a::before {
+.header-middle-contacts-phone::before {
     content: url(images/icons/icon-phone.svg);
     padding-right: 16px;
     display: flex;
 }
 
-.header-middle-contacts-box address {
+.header-middle-contacts address {
     font-size: 14px;
     line-height: 24px;
     font-style: normal;
     color: var(--dark-blue);
-}
-
-.page-title {
-    line-height: 23px;
-    text-align: left;
-    font-style: italic;
-    display: flex;
-}
-
-.page-title h1 {
-    font-size: 16px;
-    color: var(--basic-red);
-    display: flex;
-    align-items: center;
-    padding-left: 30px;
 }
 
 .header-middle-login {
@@ -273,7 +250,7 @@ ul {
     background-color: var(--white);
 }
 
-.header-middle-login-list-enter {
+.header-middle-login-list-sign-in {
     margin-right: 10px;
     padding-left: 19px;
     padding-right: 27px;
@@ -281,19 +258,19 @@ ul {
     padding-top: 12px;
 }
 
-.header-middle-login-list-enter a {
+.header-middle-login-list-sign-in a {
     display: flex;
 }
 
-.header-middle-login-list-enter p {
+.header-middle-login-list-sign-in p {
     margin: 0;
 }
 
-.header-middle-login-list-enter svg {
+.header-middle-login-list-sign-in svg {
     padding-right: 6px;
 }
 
-.header-middle-login-list-log {
+.header-middle-login-list-sign-up {
     padding: 12px 24px;
 }
 
@@ -312,29 +289,24 @@ ul {
     fill: var(--basic-grey);
 }
 
-.header-bottom-wrap {
+.header-bottom {
     padding-bottom: 54px;
 }
 
-.header-bottom {
+.header-bottom-navigation {
     background-color: var(--dark-blue);
     font-size: 18px;
     line-height: 24px;
 }
 
-.header-navigation {
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
-    border-bottom: 5px;
-    border-color: var(--black-blue);
-    border-style: solid;
+.header-bottom-navigation-list {
+    border-bottom: 5px solid var(--black-blue);
     display: flex;
     justify-content: space-around;
     height: 55px;
 }
 
-.header-navigation li {
+.header-bottom-navigation-list li {
     height: 100%;
     display: flex;
     align-items: center;
@@ -342,11 +314,11 @@ ul {
     padding-right: 25px;
 }
 
-.header-navigation li:hover {
+.header-bottom-navigation-list li:hover {
     background-color: var(--black-blue);
 }
 
-.header-navigation li:active {
+.header-bottom-navigation-list li:active {
     background-color: #1d2739;
 }
 
@@ -506,12 +478,13 @@ main {
 }
 
 .products-catalog-items {
-    width: 220px;
+    width: 218px;
     height: 318px;
     display: grid;
     justify-items: center;
     text-align: center;
     grid-template-rows: 180px 40px 30px 40px;
+    border: 1px solid var(--basic-grey);
 }
 
 .products-catalog-items:hover {
@@ -539,11 +512,8 @@ main {
 .products-btn-buy {
     color: var(--white);
     background-color: var(--basic-green);
-    border-top: 0;
-    border-left: 0;
-    border-right: 0;
-    border-bottom: 3px;
-    border-color: #367315;
+    border: 0;
+    border-bottom: 3px solid #367315;
     border-radius: 3px;
     text-transform: uppercase;
     display: flex;
@@ -571,10 +541,8 @@ main {
 .products-btn-cart {
     color: var(--dark-blue);
     background-color: var(--white);
-    border: 3px;
+    border: 3px solid var(--basic-green);
     border-radius: 3px;
-    border-color: var(--basic-green);
-    border-style: solid;
     text-transform: uppercase;
     height: min-content;
     justify-content: center;
@@ -765,9 +733,7 @@ main {
 .footer-logo {
     background-color: var(--basic-red);
     border: 0;  
-    border-bottom: 5px;
-    border-color: rgb(181, 41, 51);
-    border-style: solid;
+    border-bottom: 5px solid rgb(181, 41, 51);
     text-transform: uppercase;
     padding: 20px 41px 25px 41px;
     width: max-content;

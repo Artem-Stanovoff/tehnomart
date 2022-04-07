@@ -9,12 +9,12 @@
 
 <body>
     <header class="header">
-        <div class="header-top">
+        <div class="header-top-wrapper">
             <div class="container">
-                <ul class="header-top-list">
-                    <li class="header-top-list-title"><a href="#">Техномарт</a></li>
-                    <li class="header-top-list-search">
-                        <a class="header-top-list-btn" href="#">
+                <div class="header-top">
+                    <div class="header-top-left">
+                        <a class="header-top-title" href="#">Техномарт</a>
+                        <a class="header-top-search" href="#">
                             <svg width="17" height="17" viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg">
                                 <g>
                                     <path fill-rule="nonzero" clip-rule="nonzero"
@@ -23,9 +23,9 @@
                             </svg>
                             <p>Поиск:</p>
                         </a>
-                    </li>
-                    <li class="header-top-list-bookmarks">
-                        <a class="header-top-list-btn" href="#">
+                    </div>
+                    <div class="header-top-right">
+                        <a class="header-top-bookmarks" href="#">
                             <svg width="14" height="16" viewBox="0 0 14 16" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <g>
@@ -36,9 +36,7 @@
                             </svg>
                             <p>Закладки: 0</p>
                         </a>
-                    </li>
-                    <li class="header-top-list-cart">
-                        <a class="header-top-list-btn" href="#">
+                        <a class="header-top-cart" href="#">
                             <svg width="15" height="15" viewBox="0 0 15 15" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <g>
@@ -54,25 +52,21 @@
                             </svg>
                             <p>Корзина: 0</p>
                         </a>
-                    </li>
-                    <li class="header-top-list-order"><a href="#">Оформить заказ</a></li>
-                </ul>
+                        <a class="header-top-order" href="#">Оформить заказ</a>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="container">
             <div class="header-middle">
-                <div class="page-title">
-                    <h1>Интернет-магазин<br>строительных материалов<br>и инструментов для ремонта</h1>
-                </div>
+                <h1 class="page-title">Интернет-магазин<br>строительных материалов<br>и инструментов для ремонта</h1>
                 <div class="header-middle-contacts">
-                    <div class="header-middle-contacts-box">
-                        <a href="tel:+78125550555">+7(812) 555-05-55</a>
-                        <address>г. Санкт-Петербург, ул. Б.Конюшенная, д. 19/8</address>
-                    </div>
+                    <a class="header-middle-contacts-phone" href="tel:+78125550555">+7(812) 555-05-55</a>
+                    <address>г. Санкт-Петербург, ул. Б.Конюшенная, д. 19/8</address>
                 </div>
                 <div class="header-middle-login">
                     <ul class="header-middle-login-list">
-                        <li class="header-middle-login-list-enter">
+                        <li class="header-middle-login-list-sign-in">
                             <a href="#">
                                 <svg width="20" height="17" viewBox="0 0 20 17" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M14.1667 8.5L5.71429 0V6H0V11H5.71429V17L14.1667 8.5Z" />
@@ -82,15 +76,15 @@
                                 <p>Войти:</p>
                             </a>
                         </li>
-                        <li class="header-middle-login-list-log">
+                        <li class="header-middle-login-list-sign-up">
                             <a href="#">Регистрация</a>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="header-bottom-wrap">
-                <nav class="header-bottom">
-                    <ul class="header-navigation">
+            <div class="header-bottom">
+                <nav class="header-bottom-navigation">
+                    <ul class="header-bottom-navigation-list">
                         <li><a href="#">Главная</a></li>
                         <li><a href="#">Компания</a></li>
                         <li><a href="#">Каталог</a></li>
@@ -107,7 +101,7 @@
     <main>
         <div class="container">
             <section class="promo">
-                <h1 class="visually-hidden">Товары</h1>
+                <h2 class="visually-hidden">Промо</h2>
                 <ul class="promo-elements">
                     <li class="promo-elements-material">
                         <div class="promo-elements-box">
@@ -276,7 +270,7 @@
                             <button type="button" class="products-btn-cart">В корзину</button>
                         </div>
                         <b>Перфоратор BOSCH<br>BFG 2000</b>
-                        <s></s>
+                        <s>22500</s>
                         <a href="#">12500 Р.</a>
                     </li>
                 </ul>
@@ -289,28 +283,28 @@
                 </div>
                 <ul class="firm-list">
                     <li>
-                        <a href="#"><img src="images/bosch.png" width="220" height="145" aria-label="bosch"></a>
+                        <a href="#"><img src="images/bosch.png" width="220" height="145" alt="bosch"></a>
                     </li>
                     <li>
-                        <a href="#"><img src="images/makita.png" width="220" height="145" aria-label="makita"></a>
+                        <a href="#"><img src="images/makita.png" width="220" height="145" alt="makita"></a>
                     </li>
                     <li>
-                        <a href="#"><img src="images/dewalt.png" width="220" height="145" aria-label="dewalt"></a>
+                        <a href="#"><img src="images/dewalt.png" width="220" height="145" alt="dewalt"></a>
                     </li>
                     <li>
-                        <a href="#"><img src="images/interckol.png" width="220" height="145" aria-label="interckol"></a>
+                        <a href="#"><img src="images/interckol.png" width="220" height="145" alt="interckol"></a>
                     </li>
                     <li>
-                        <a href="#"><img src="images/hitachi.png" width="220" height="145" aria-label="hitachi"></a>
+                        <a href="#"><img src="images/hitachi.png" width="220" height="145" alt="hitachi"></a>
                     </li>
                     <li>
-                        <a href="#"><img src="images/lg.png" width="220" height="145" aria-label="lg"></a>
+                        <a href="#"><img src="images/lg.png" width="220" height="145" alt="lg"></a>
                     </li>
                     <li>
-                        <a href="#"><img src="images/aeg.png" width="220" height="145" aria-label="aeg"></a>
+                        <a href="#"><img src="images/aeg.png" width="220" height="145" alt="aeg"></a>
                     </li>
                     <li>
-                        <a href="#"><img src="images/metabo.png" width="220" height="145" aria-label="metabo"></a>
+                        <a href="#"><img src="images/metabo.png" width="220" height="145" alt="metabo"></a>
                     </li>
                 </ul>
             </section>
@@ -323,9 +317,9 @@
                     Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
                 <ul class="services-list">
                     <li class="services-list-button">
-                        <button class="services-list-button-item" type="button" aria-label="Доставка">Доставка</button>
-                        <button class="services-list-button-item" type="button" aria-label="Гарантия">Гарантия</button>
-                        <button class="services-list-button-item" type="button" aria-label="Кредит">Кредит</button>
+                        <button class="services-list-button-item" type="button">Доставка</button>
+                        <button class="services-list-button-item" type="button">Гарантия</button>
+                        <button class="services-list-button-item" type="button">Кредит</button>
                     </li>
                     <li class="services-list-item services-delivery visually-hidden">
                         <h3 class="services-list-item-subtitle">Доставка</h3>
@@ -357,7 +351,7 @@
                 <div class="about-delivery">
                     <h2 class="about-title">Компания "Техномарт"</h2>
                     <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для<br>
-                        ремонта и строительтва не оставит равнодушными любителей сэкономить на<br>
+                        ремонта и строительства не оставит равнодушными любителей сэкономить на<br>
                         гастарбайтерах</p>
                     <p>Мы можем доставить ваш товар в самые отдаленные точки России!<br>
                         Техномарт работает со многими транспортными компаниями:</p>
@@ -373,7 +367,7 @@
                     <p>Вы можете забрать товар сами,<br>
                         заехав в наш офис:</p>
                     <img src="images/map.png" width="300" height="158"
-                        alt=" мы находимся по адресу Санкт-Петербург улица Большая Конюшенная дом 19 корпус 8">
+                        alt="мы находимся по адресу Санкт-Петербург улица Большая Конюшенная дом 19 корпус 8">
                     <a class="about-office-btn" href="#">Заблудились? Напишите нам!</a>
                 </div>
             </section>
