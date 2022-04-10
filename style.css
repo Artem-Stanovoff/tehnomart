@@ -50,7 +50,7 @@ ul {
 /*хедер*/
 
 .header {
-    background-color: rgba(41, 52, 73, 0.02);
+    background-color: rgba(0, 0, 0, 0.01);
 }
 
 .header-top-wrapper {
@@ -274,17 +274,17 @@ ul {
     padding: 12px 24px;
 }
 
-.header-middle-login a {
+.header-middle-login-link {
     color: #000000;
     fill: var(--basic-grey);
 }
 
-.header-middle-login a:hover {
+.header-middle-login-link:hover {
     color: var(--basic-red);
     fill: #3d546f;
 }
 
-.header-middle-login a:active {
+.header-middle-login-link:active {
     color: var(--basic-grey);
     fill: var(--basic-grey);
 }
@@ -329,7 +329,7 @@ main {
     margin-top: 60px;
 }
 
-.promo-elements {
+.promo-offers-list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -340,62 +340,44 @@ main {
     gap: 20px;
 }
 
-.promo-elements-material {
+.promo-elements-materials {
     grid-area: A;
+    background-color: #FFBF47;
 }
 
 .promo-elements-tool {
     grid-area: B;
+    background-color: #3BBCE3;
 }
 
 .promo-elements-technic {
     grid-area: C;
+    background-color: #DC91D8;
 }
 
-.promo-elements-boer {
+.promo-elements-boers {
     grid-area: D;
+    background-image: url(images/perforators.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 .promo-elements-benefit {
     grid-area: E;
+    background-color: #8ED78F;
 }
 
 .promo-elements-delivery {
     grid-area: F;
+    background-color: #FFC047;
 }
 
-.promo-elements h3,
-.promo-elements a {
+.promo-offers-item-title {
     color: var(--white);
-}
-
-.promo-elements a {
-    font-size: 14px;
-    line-height: 18px;
-    font-style: normal;
-    text-align: center;
-    text-transform: uppercase;
-}
-
-.promo-elements-material {
-    background-color: #FFBF47;
-}
-
-.promo-elements-box {
-    display: flex;
-}
-
-.promo-elements-box-desc {
-    padding-left: 23px;
-    padding-top: 20px;
-    padding-bottom: 23px;
-}
-
-.promo-elements-box-desc h3 {
     margin: 0;
 }
 
-.promo-elements-box-desc-link {
+.promo-offers-item-link {
     width: 135px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -403,46 +385,40 @@ main {
     margin-top: 20px;
     justify-content: center;
     display: flex;
+    font-size: 14px;
+    color: var(--white);
+    line-height: 18px;
+    font-style: normal;
+    text-align: center;
+    text-transform: uppercase;
 }
 
-.promo-elements-box-desc-link:hover {
+.promo-offers-item-link:hover {
     background-color: rgba(0, 0, 0, 0.2);
 }
 
-.promo-elements-box-desc-link:active {
+.promo-offers-item-link:active {
     background-color: rgba(0, 0, 0, 0.35);
 }
 
-.promo-elements-box-img {
+.promo-offers-item {
+    display: flex;
+}
+
+.promo-offers-item-content {
+    padding-left: 23px;
+    padding-top: 20px;
+    padding-bottom: 23px;
+}
+
+.promo-offers-item-img-wrapper {
     display: flex;
     align-items: center;
     padding-left: 37px;
 }
 
-.promo-elements-tool {
-    background-color: #3BBCE3;
-}
-
-.promo-elements-technic {
-    background-color: #DC91D8;
-}
-
-.promo-elements-boer {
-    background-image: url(images/perforators.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-}
-
-.promo-elements-benefit {
-    background-color: #8ED78F;
-}
-
-.promo-elements-delivery {
-    background-color: #FFC047;
-}
-
 /* заголовок секции популярных товаров и производителей*/
-.products-title {
+.products-title-wrapper {
     background-color: #F9F5F0;
     display: flex;
     justify-content: space-between;
@@ -450,16 +426,19 @@ main {
     margin-bottom: 20px;
 }
 
-.products-title a {
+.products-title-link {
     background-color: var(--basic-red);
     height: min-content;
     padding: 10px 24px;
     margin-top: 36px;
     margin-bottom: 36px;
+    margin-left: 28px;
+    margin-right: 14px;
+    align-self: center;
+    text-transform: uppercase;
 }
 
-.products-title h2,
-.products-title a {
+.products-title {
     margin-left: 28px;
     margin-right: 14px;
     align-self: center;
@@ -473,43 +452,60 @@ main {
     gap: 20px;
 }
 
-.products-catalog s {
+.products-catalog-item-previous-price {
     color: var(--basic-grey);
+    margin-bottom: 15px;
 }
 
-.products-catalog-items {
+.products-catalog-item {
     width: 218px;
     height: 318px;
-    display: grid;
-    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    grid-template-rows: 180px 40px 30px 40px;
     border: 1px solid var(--basic-grey);
 }
 
-.products-catalog-items:hover {
+.products-catalog-item:hover {
     box-shadow: 0 0 5px 2px var(--basic-grey);
 }
 
-.products-catalog-items a {
+.products-catalog-item-price {
     background-color: var(--basic-red);
-    height: min-content;
+    width: max-content;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-left: 32px;
     padding-right: 44px;
     clip-path: polygon(0% 0%, 86% 0, 100% 50%, 86% 100%, 0% 100%);
+    border-radius: 3px;
 }
 
-.products-catalog-items-btn {
+.products-catalog-item-buttons {
     display: grid;
-    height: 86px;
     width: 135px;
+    gap: 10px;
+}
+
+.products-catalog-item-top {
+    width: 220px;
+    height: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.products-catalog-item-title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 20px;
+    margin-top: 0;
 }
 
 /*кнопка карточки "купить" */
 
-.products-btn-buy {
+.products-catalod-buy-btn {
     color: var(--white);
     background-color: var(--basic-green);
     border: 0;
@@ -523,22 +519,22 @@ main {
     justify-content: center;
 }
 
-.products-btn-buy::before {
+.products-catalod-buy-btn::before {
     content: url(images/icons/icon-cart.svg);
     padding-right: 9px;
 }
 
-.products-btn-buy:hover {
+.products-catalod-buy-btn:hover {
     background-color: #09bb2d;
 }
 
-.products-btn-buy:active {
+.products-catalod-buy-btn:active {
     background-color: #518534;
 }
 
 /*кнопка карточки "в корзину*/
 
-.products-btn-cart {
+.products-catalod-cart-btn {
     color: var(--dark-blue);
     background-color: var(--white);
     border: 3px solid var(--basic-green);
@@ -550,50 +546,64 @@ main {
     padding-bottom: 8px;
 }
 
-.products-btn-cart:hover {
+.products-catalod-cart-btn:hover {
     border-color: var(--dark-blue);
 }
 
-.products-btn-cart:active {
+.products-catalod-cart-btn:active {
     border-color: var(--basic-grey);
     color: var(--basic-grey);
 }
 
 /*секция популярные производители*/
 
-.firm-list {
+.manufactures-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 20px
 }
 
-.firm-list img:hover {
+.manufactures-list-item {
+    border: 1px solid var(--basic-grey);
+    width: 218px;
+    height: 143px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.manufactures-list-item:hover {
     box-shadow: 0 0 5px 2px var(--basic-grey);
 }
 
-.firm-list img:active {
+.manufactures-list-item:active {
     opacity: 0.3;
     box-shadow: 0 0 5px 2px var(--basic-grey);
 }
 
 /* секция сервисы */
 .services {
-    background-color: rgba(41, 52, 73, 0.01);
+    background-color: #f1f5f7;
 }
 
-.services h2 {
+.services-title {
     padding-top: 65px;
     padding-bottom: 25px;
+}
+
+.services-inner {
+    display: flex;
 }
 
 .services-list {
     display: flex;
     margin-top: 20px;
     height: 283px;
+    margin: 0;
 }
 
-.services-list-button {
+.services-button-list {
     width: 240px;
     flex-shrink: 0;
     display: flex;
@@ -601,7 +611,11 @@ main {
     justify-content: start;
 }
 
-.services-list-button-item {
+.services-right {
+    width: 100%;
+}
+
+.services-list-btn-item {
     background-color: var(--dark-blue);
     border: 0;
     justify-content: start;
@@ -609,13 +623,14 @@ main {
     padding-left: 22px;
     padding-top: 14px;
     padding-bottom: 14px;
+    width: 100%;
 }
 
-.services-list-button-item:hover {
+.services-list-btn-item:hover {
     background-color: var(--black-blue);
 }
 
-.services-list-button-item:active {
+.services-list-btn-item:active {
     background-color: var(--white);
     color: var(--dark-blue);
 }
@@ -623,9 +638,11 @@ main {
 .services-list-item {
     margin-left: 80px;
     width: 100%;
+    background-repeat: no-repeat;
+    background-position: top right;
 }
 
-.services-list-item-subtitle {
+.services-list-item-title {
     margin: 0;
 }
 
@@ -636,20 +653,14 @@ main {
 
 .services-delivery {
     background-image: url(images/delivery.png);
-    background-repeat: no-repeat;
-    background-position: top right;
 }
 
 .services-warranty {
     background-image: url(images/warranty.png);
-    background-repeat: no-repeat;
-    background-position: top right;
 }
 
 .services-credit {
     background-image: url(images/credit.png);
-    background-repeat: no-repeat;
-    background-position: top right;
 }
 
 .services-credit-btn {
@@ -713,24 +724,27 @@ main {
 }
 
 /*footer*/
+.footer {
+    color: var(--white);
+}
 
 .footer-top {
     background-color: var(--dark-blue);
     display: flex;
 }
 
-.footer-top-flex {
+.footer-top-inner {
     display: flex;
     margin-bottom: 60px;
 }
 
-.footer-top-box {
+.footer-top-left {
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
 }
 
-.footer-logo {
+.footer-company-name {
     background-color: var(--basic-red);
     border: 0;  
     border-bottom: 5px solid rgb(181, 41, 51);
@@ -739,11 +753,9 @@ main {
     width: max-content;
 }
 
-.footer-top-box p {
-    color: var(--white);
+.footer-top-left-desc {
     font-size: 18px;
     line-height: 24px;
-    font-style: normal;
 }
 
 .footer-navigation {
@@ -751,11 +763,11 @@ main {
     padding-left: 70px;
 }
 
-.footer-navigation a:hover {
+.footer-navigation-first-link:hover {
     text-decoration-line: underline;
 }
 
-.footer-navigation a:active {
+.footer-navigation-first-link:active {
     opacity: 0.3;
     text-decoration-line: none
 }
@@ -772,11 +784,11 @@ main {
     justify-content: space-between;
 }
 
-.footer-navigation-secondary a {
+.footer-navigation-secondary-link {
     color: #FFD180;
 }
 
-.footer-navigation-secondary a:first-child {
+.footer-navigation-secondary-link:first-child {
     margin-left: 25px;
 }
 
@@ -784,45 +796,47 @@ main {
     background-color: var(--black-blue);
 }
 
-.footer-bottom-flex {
+.footer-bottom-inner {
     display: flex;
     justify-content: space-between;
     padding-top: 35px;
     padding-bottom: 15px;
 }
 
-.footer-bottom-email {
+.footer-bottom-contacts {
     display: flex;
     width: 290px;
     justify-content: space-between;
 }
 
-.footer-email {
+.footer-bottom-contacts-link {
     color: #FFD180;
 }
 
-.footer-email:hover {
+.footer-bottom-contacts-link:hover {
     text-decoration-line: underline;
 }
 
-.footer-email:active {
+.footer-bottom-contacts-link:active {
     text-decoration-line: none;
     color: var(--basic-red);
 }
 
-.footer-bottom p {
+.footer-bottom-copyright {
     margin: 0;
-    color: var(--white);
-    font-size: 16px;
     line-height: 18px;
-    font-style: normal;
 }
 
-.footer-media {
+.footer-bottom-contacts-box {
+    margin: 0;
+    line-height: 18px;
+}
+
+.footer-social-medias-list {
     display: flex;
 }
 
-.footer-media-box {
+.footer-social-medias-item {
     height: 42px;
     width: 42px;
     background-color: #212A3A;
@@ -831,12 +845,12 @@ main {
     display: flex;
 }
 
-.footer-media-box:hover,
-.footer-media-box:active {
+.footer-social-medias-item:hover,
+.footer-social-medias-item:active {
     background-color: var(--basic-red);
 }
 
-.footer-media-box a {
+.footer-social-medias-item-link {
     display: flex;
     width: 100%;
     justify-content: center;
