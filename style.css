@@ -1,4 +1,35 @@
 /* Глобальные*/
+@font-face {
+    font-family: 'Cuprum';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(fonts/cuprum/cuprum.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Cuprum';
+    font-style: italic;
+    font-weight: 400;
+    font-display: swap;
+    src: url(fonts/cuprum/cuprum-italic.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Cuprum';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(fonts/cuprum/cuprum.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Ptsans';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(fonts/ptasans/ptsans.woff2) format('woff2');
+}
 
 :root {
     --dark-blue: #32425C;
@@ -49,6 +80,7 @@ ul {
 
 .header {
     background-color: rgba(0, 0, 0, 0.01);
+    font-family: "Cuprum";
 }
 
 /*хедер топ*/
@@ -61,6 +93,7 @@ ul {
 .header-top {
     display: flex;
     height: 42px;
+    font-size: 18px;
 }
 
 .header-top-left {
@@ -81,6 +114,7 @@ ul {
     height: 100%;
     display: flex;
     align-items: center;
+    font-size: 23px;
 }
 
 .header-top-title:active {
@@ -193,6 +227,7 @@ ul {
     font-style: italic;
     display: flex;
     font-size: 16px;
+    font-weight: 400;
     color: var(--basic-red);
     align-items: center;
     padding-left: 30px;
@@ -237,6 +272,8 @@ ul {
 .header-middle-login-list {
     display: flex;
     align-items: center;
+    font-size: 21px;
+    line-height: 21px;
 }
 
 .header-middle-login-list-sign-in {
@@ -263,6 +300,11 @@ ul {
 .header-middle-login-link:active {
     color: var(--basic-grey);
     fill: var(--basic-grey);
+}
+
+.header-middle-login-list-sign-in-icon {
+    display: flex;
+    align-self: center;
 }
 
 .header-middle-login-link-deck {
@@ -315,6 +357,10 @@ main {
 }
 
 /*майн - промо*/
+.promo {
+    font-family: "Cuprum";
+}
+
 .promo-offers-list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -371,6 +417,9 @@ main {
 .promo-offers-item-title {
     color: var(--white);
     margin: 0;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
 }
 
 /*кнопки карточек*/
@@ -411,6 +460,7 @@ main {
     justify-content: space-between;
     margin-top: 65px;
     margin-bottom: 20px;
+    font-family: "Cuprum";
 }
 
 .products-title {
@@ -418,6 +468,10 @@ main {
     margin-right: 14px;
     align-self: center;
     text-transform: uppercase;
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 400;
+    color: var(--dark-blue);
 }
 
 .products-title-link {
@@ -437,6 +491,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    font-family: "Ptsans";
 }
 
 .products-catalog-item {
@@ -528,6 +583,9 @@ main {
 .products-catalog-item-previous-price {
     color: var(--basic-grey);
     margin-bottom: 15px;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 18px;
 }
 
 .products-catalog-item-price {
@@ -537,8 +595,12 @@ main {
     padding-bottom: 10px;
     padding-left: 32px;
     padding-right: 44px;
+    margin-left: 10px;
     clip-path: polygon(0% 0%, 86% 0, 100% 50%, 86% 100%, 0% 100%);
     border-radius: 3px;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 18px;
 }
 
 /*секция популярные производители*/
@@ -575,10 +637,24 @@ main {
 .services-title {
     padding-top: 65px;
     padding-bottom: 25px;
+    font-family: "Cuprum";
+    text-transform: uppercase;
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 400;
+}
+
+.services-title-desc {
+    font-family: "Ptsans";
+    font-size: 13px;
+    line-height: 24px;
 }
 
 .services-inner {
     display: flex;
+}
+
+.services-left {
 }
 
 .services-button-list {
@@ -598,6 +674,12 @@ main {
     padding-top: 14px;
     padding-bottom: 14px;
     width: 100%;
+    font-family: "Cuprum";
+    font-size: 21px;
+    line-height: 30px;
+    color: var(--white);
+    border-top: 1px solid #293449;
+    border-bottom: 1px solid #293449;
 }
 
 .services-list-btn-item:hover {
@@ -629,11 +711,20 @@ main {
 
 .services-list-item-title {
     margin: 0;
+    font-family: "Cuprum";
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 400;
+    color: var(--black-blue);
+    text-transform: uppercase;
 }
 
 .services-list-item-desc {
     margin-top: 30px;
     width: 330px;
+    font-family: "Ptsans";
+    font-size: 13px;
+    line-height: 24px;
 }
 
 .services-delivery {
@@ -670,6 +761,17 @@ main {
 
 .about-title {
     margin: 0;
+    font-family: "Cuprum";
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.about-desc {
+    font-family: "Ptsans";
+    font-size: 13px;
+    line-height: 24px;
 }
 
 .about-list-item::before {
@@ -684,12 +786,15 @@ main {
     margin-top: 12px;
     margin-bottom: 12px;
     display: flex;
+    font-family: "Cuprum";
 }
 
 .about-delivery-btn {
     background-color: var(--basic-red);
     padding: 10px 40px;
     width: max-content;
+    font-family: "Cuprum";
+    text-transform: uppercase;
 }
 
 .about-office {
@@ -705,6 +810,7 @@ main {
     padding-top: 10px;
     padding-bottom: 10px;
     width: 100%;
+    font-family: "Cuprum";
     display: flex;
     justify-content: center;
 }
@@ -712,6 +818,7 @@ main {
 /*футер*/
 .footer {
     color: var(--white);
+    font-family: "Cuprum";
 }
 
 /*футер - топ*/
@@ -738,6 +845,8 @@ main {
     text-transform: uppercase;
     padding: 20px 41px 25px 41px;
     width: max-content;
+    font-size: 30px;
+    line-height: 30px;
 }
 
 .footer-top-left-desc {
@@ -794,6 +903,7 @@ main {
 
 .footer-bottom-copyright {
     margin: 0;
+    font-size: 16px;
     line-height: 18px;
 }
 
@@ -834,6 +944,8 @@ main {
     display: flex;
     width: 290px;
     justify-content: space-between;
+    font-size: 16px;
+    line-height: 18px;
 }
 
 .footer-bottom-contacts-box {
