@@ -18,9 +18,9 @@
 @font-face {
     font-family: 'Cuprum';
     font-style: normal;
-    font-weight: 400;
+    font-weight: bold;
     font-display: swap;
-    src: url(fonts/cuprum/cuprum.woff2) format('woff2');
+    src: url(fonts/cuprum/cuprum-bold.woff2) format('woff2');
 }
 
 @font-face {
@@ -249,7 +249,8 @@ ul {
 .header-middle-contacts-phone {
     font-size: 21px;
     line-height: 30px;
-    font-weight: 700;
+    font-style: normal;
+    font-weight: bold;
     color: var(--basic-red);
     padding: 7px 40px;
     height: 30px;
@@ -356,6 +357,19 @@ main {
     margin-top: 60px;
 }
 
+/*элемент "new"*/
+.new-element-catalog {
+    background-color: var(--basic-red);
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    clip-path: polygon(68% 0, 100% 32%, 100% 100%, 0 0);
+    left: calc(100% - 70px);
+    background-image: url(images/icons/new.svg);
+    background-repeat: no-repeat;
+    background-position: 75% 25%;
+}
+
 /*майн - промо*/
 .promo {
     font-family: "Cuprum";
@@ -375,33 +389,36 @@ main {
 .promo-elements-materials {
     grid-area: A;
     background-color: #FFBF47;
+    position: relative;
 }
 
 .promo-elements-tool {
     grid-area: B;
     background-color: #3BBCE3;
+    position: relative;
 }
 
 .promo-elements-technic {
     grid-area: C;
     background-color: #DC91D8;
+    position: relative;
 }
 
 .promo-elements-boers {
     grid-area: D;
-    background-image: url(images/perforators.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+    position: relative;
 }
 
 .promo-elements-benefit {
     grid-area: E;
     background-color: #8ED78F;
+    position: relative;
 }
 
 .promo-elements-delivery {
     grid-area: F;
     background-color: #FFC047;
+    position: relative;
 }
 
 .promo-offers-item {
@@ -412,6 +429,8 @@ main {
     padding-left: 23px;
     padding-top: 20px;
     padding-bottom: 23px;
+    display: flex;
+    flex-direction: column;
 }
 
 .promo-offers-item-title {
@@ -419,7 +438,7 @@ main {
     margin: 0;
     font-size: 24px;
     line-height: 30px;
-    font-weight: 700;
+    font-weight: bold;
 }
 
 /*кнопки карточек*/
@@ -451,6 +470,109 @@ main {
     display: flex;
     align-items: center;
     padding-left: 37px;
+}
+
+/*слайдер - перфораторы*/
+.promo-elements-perforators-slider   {
+    height: 100%;
+    background-image: url(images/perforators.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%; 
+}
+
+/*слайдер - дрели*/
+.promo-elements-drills-slider {
+    height: 100%;
+    background-image: url(images/drills.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%; 
+}
+
+.promo-elements-perforators-slider-inner {
+    padding: 25px;
+    height: calc(100% - 50px);
+    display: flex;
+    flex-direction: column;
+}
+
+.promo-offers-title-slider {
+    color: var(--white);
+    margin: 0;
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.promo-offers-desc-slider {
+    margin-top: 15px;
+    color: var(--white);
+    margin: 0;
+    margin-top: 10px;
+}
+
+.promo-offers-link-slider {
+    color: var(--white);
+    background-color: var(--basic-red);
+    width: max-content;
+    padding: 10px 46px;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-top: auto;
+}
+
+.promo-offers-link-slider:hover {
+    background-color: #ca2c37;
+}
+
+.promo-offers-link-slider:active {
+    background-color: #ba2732;
+}
+
+/*боковые переключатели*/
+.promo-offers-slider-btn {
+    position: absolute;
+    display: flex;
+    width: 575px;
+    justify-content: space-between;
+    align-items: center;
+    bottom: calc(42%);
+    left: 25px;
+}
+
+.promo-offers-slider-btn-left {
+    background-image: url(images/icons/icon-btn-left.svg);
+    width: 22px;
+    height: 40px;		
+    border: none;	
+    padding: 0;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.promo-offers-slider-btn-right {
+    background-image: url(images/icons/icon-btn-right.svg);
+    width: 22px;
+    height: 40px;
+    border: none;	
+    padding: 0;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/*радио кнопки*/
+.promo-offers-slider-radio {
+    position: absolute;
+    bottom: 35px;
+    left: calc(50% - 20px);
+}
+
+.promo-offers-slider-radio-btn {
+    appearance: none;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: var(--white);
 }
 
 /*блок с ссылкой на популярные товары и производителей*/
@@ -502,6 +624,7 @@ main {
     align-items: center;
     text-align: center;
     border: 1px solid var(--basic-grey);
+    position: relative;
 }
 
 .products-catalog-item:hover {
@@ -574,7 +697,7 @@ main {
 
 .products-catalog-item-title {
     font-size: 18px;
-    font-weight: 700;
+    font-weight: bold;
     line-height: 20px;
     margin-top: 0;
 }
@@ -584,7 +707,7 @@ main {
     color: var(--basic-grey);
     margin-bottom: 15px;
     font-size: 17px;
-    font-weight: 700;
+    font-weight: bold;
     line-height: 18px;
 }
 
@@ -599,7 +722,7 @@ main {
     clip-path: polygon(0% 0%, 86% 0, 100% 50%, 86% 100%, 0% 100%);
     border-radius: 3px;
     font-size: 17px;
-    font-weight: 700;
+    font-weight: bold;
     line-height: 18px;
 }
 
@@ -652,9 +775,11 @@ main {
 
 .services-inner {
     display: flex;
+    margin-top: 70px;
 }
 
 .services-left {
+    position: relative;
 }
 
 .services-button-list {
@@ -671,8 +796,8 @@ main {
     justify-content: start;
     display: flex;
     padding-left: 22px;
-    padding-top: 14px;
-    padding-bottom: 14px;
+    padding-top: 12px;
+    padding-bottom: 12px;
     width: 100%;
     font-family: "Cuprum";
     font-size: 21px;
@@ -689,6 +814,15 @@ main {
 .services-list-btn-item:active {
     background-color: var(--white);
     color: var(--dark-blue);
+}
+
+.services-left-background-image {
+    background-image: url(images/shadow.png);
+    position: absolute;
+    width: 10px;
+    height: 280px;
+    left: calc(100% - 10px);
+    top: -52px;
 }
 
 .services-right {

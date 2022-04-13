@@ -15,7 +15,8 @@
                     <div class="header-top-left">
                         <a class="header-top-title" href="#">Техномарт</a>
                         <a class="header-top-search" href="#">
-                            <svg class="header-top-icons" width="17" height="17" viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="header-top-icons" width="17" height="17" viewBox="0 0 17 17"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <g>
                                     <path fill-rule="nonzero" clip-rule="nonzero"
                                         d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z" />
@@ -62,13 +63,15 @@
                 <h2 class="page-title">Интернет-магазин<br>строительных материалов<br>и инструментов для ремонта</h2>
                 <div class="header-middle-contacts">
                     <a class="header-middle-contacts-phone" href="tel:+78125550555">+7(812) 555-05-55</a>
-                    <address class="header-middle-contacts-address">г. Санкт-Петербург, ул. Б.Конюшенная, д. 19/8</address>
+                    <address class="header-middle-contacts-address">г. Санкт-Петербург, ул. Б.Конюшенная, д. 19/8
+                    </address>
                 </div>
                 <div class="header-middle-login">
                     <ul class="header-middle-login-list">
                         <li class="header-middle-login-list-sign-in">
                             <a class="header-middle-login-link" href="#">
-                                <svg class="header-middle-login-list-sign-in-icon" width="20" height="17" viewBox="0 0 20 17" xmlns="http://www.w3.org/2000/svg">
+                                <svg class="header-middle-login-list-sign-in-icon" width="20" height="17"
+                                    viewBox="0 0 20 17" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M14.1667 8.5L5.71429 0V6H0V11H5.71429V17L14.1667 8.5Z" />
                                     <path
                                         d="M16.1771 15.01H11.3895V17H16.1771C18.2514 17 19.0381 15.19 19.0619 13.974V3.028C19.0381 1.811 18.2514 0 16.1771 0H11.3895V1.99H16.1771C16.9762 1.99 17.1219 2.671 17.1391 3.047V13.951C17.1229 14.327 16.9762 15.01 16.1771 15.01Z" />
@@ -104,6 +107,7 @@
                 <h2 class="visually-hidden">Промо-предложения </h2>
                 <ul class="promo-offers-list">
                     <li class="promo-elements-materials">
+                        <div class="new-element-catalog"></div>
                         <div class="promo-offers-item">
                             <div class="promo-offers-item-content">
                                 <h3 class="promo-offers-item-title">Материалы</h3>
@@ -158,11 +162,27 @@
                         </div>
                     </li>
                     <li class="promo-elements-boers">
-                        <div>
-                            <div class="promo-offers-item-content">
-                                <h3 class="promo-offers-item-title">Дрели</h3>
-                                <a href="#">Соседям на радость!</a>
+                        <div class="promo-elements-perforators-slider  visually-hidden">
+                            <div class="promo-elements-perforators-slider-inner">
+                                <h3 class="promo-offers-title-slider">Перфораторы</h3>
+                                <p class="promo-offers-desc-slider">Настоящие мужские игрушки</p>
+                                <a class="promo-offers-link-slider" href="#">Открыть Каталог</a>
                             </div>
+                        </div>
+                        <div class="promo-elements-drills-slider">
+                            <div class="promo-elements-perforators-slider-inner">
+                                <h3 class="promo-offers-title-slider">Дрели</h3>
+                                <p class="promo-offers-desc-slider">Соседям на радость!</p>
+                                <a class="promo-offers-link-slider" href="#">Открыть Каталог</a>
+                            </div>
+                        </div>
+                        <div class="promo-offers-slider-btn">
+                            <button class="promo-offers-slider-btn-left"></button>
+                            <button class="promo-offers-slider-btn-right"></button>
+                        </div>
+                        <div class="promo-offers-slider-radio">
+                            <input class="promo-offers-slider-radio-btn" type="radio" id="perforators" name="perforators">
+                            <input class="promo-offers-slider-radio-btn" type="radio" id="drills" name="drills">
                         </div>
                     </li>
                     <li class="promo-elements-benefit">
@@ -222,6 +242,7 @@
                 </div>
                 <ul class="products-catalog">
                     <li class="products-catalog-item">
+                        <div class="new-element-catalog visually-hidden"></div>
                         <div class="products-catalog-item-top">
                             <img class="visually-hidden" src="images/bosch-bfg-9000.png" width="184" height="164"
                                 alt="Перфоратор BOSCH BFG 9000">
@@ -235,6 +256,7 @@
                         <a class="products-catalog-item-price" href="#">25500 Р.</a>
                     </li>
                     <li class="products-catalog-item">
+                        <div class="new-element-catalog"></div>
                         <div class="products-catalog-item-top">
                             <img src="images/bosch-bfg-3000.png" width="127" height="112"
                                 alt="Перфоратор BOSCH BFG 9000">
@@ -248,6 +270,7 @@
                         <a class="products-catalog-item-price" href="#">15500 Р.</a>
                     </li>
                     <li class="products-catalog-item">
+                        <div class="new-element-catalog visually-hidden"></div>
                         <div class="products-catalog-item-top">
                             <img src="images/bosch-bfg-6000.png" width="144" height="128"
                                 alt="Перфоратор BOSCH BFG 9000">
@@ -261,6 +284,7 @@
                         <a class="products-catalog-item-price" href="#">25500 Р.</a>
                     </li>
                     <li class="products-catalog-item">
+                        <div class="new-element-catalog"></div>
                         <div class="products-catalog-item-top">
                             <img src="images/bosch-bfg-2000.png" width="127" height="112"
                                 alt="Перфоратор BOSCH BFG 9000">
@@ -328,6 +352,7 @@
                                 <button class="services-list-btn-item" type="button">Кредит</button>
                             </li>
                         </ul>
+                        <div class="services-left-background-image"></div>
                     </div>
                     <div class="services-right">
                         <ul class="services-list">
@@ -393,7 +418,8 @@
                 <div class="footer-top-inner">
                     <div class="footer-top-left">
                         <a class="footer-company-name" href="#">Техномарт</a>
-                        <p class="footer-top-left-desc">г. Санкт-Петербург, ул. Б.Конюшенная, д. 19/8<br>+7(812) 555-05-55</p>
+                        <p class="footer-top-left-desc">г. Санкт-Петербург, ул. Б.Конюшенная, д. 19/8<br>+7(812)
+                            555-05-55</p>
                     </div>
                     <div class="footer-navigation">
                         <ul class="footer-navigation-first">
@@ -435,8 +461,10 @@
                         </li>
                     </ul>
                     <div class="footer-bottom-contacts">
-                        <p class="footer-bottom-contacts-box">Обратная связь:<br><a class="footer-bottom-contacts-link" href="#">mail@htmlacademy.ru</a></p>
-                        <p class="footer-bottom-contacts-box">Разработано:<br><a class="footer-bottom-contacts-link" href="#">htmlacademy.ru</a></p>
+                        <p class="footer-bottom-contacts-box">Обратная связь:<br><a class="footer-bottom-contacts-link"
+                                href="#">mail@htmlacademy.ru</a></p>
+                        <p class="footer-bottom-contacts-box">Разработано:<br><a class="footer-bottom-contacts-link"
+                                href="#">htmlacademy.ru</a></p>
                     </div>
                 </div>
             </div>
@@ -445,4 +473,3 @@
 </body>
 
 </html>
-
