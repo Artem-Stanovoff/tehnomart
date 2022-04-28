@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="ru">
 
 <head>
@@ -162,7 +162,7 @@
                         </div>
                     </li>
                     <li class="promo-elements-boers">
-                        <div class="promo-elements-perforators-slider  visually-hidden">
+                        <div class="promo-elements-perforators-slider visually-hidden">
                             <div class="promo-elements-perforators-slider-inner">
                                 <h3 class="promo-offers-title-slider">Перфораторы</h3>
                                 <p class="promo-offers-desc-slider">Настоящие мужские игрушки</p>
@@ -181,8 +181,13 @@
                             <button class="promo-offers-slider-btn-right"></button>
                         </div>
                         <div class="promo-offers-slider-radio">
-                            <input class="promo-offers-slider-radio-btn" type="radio" id="perforators" name="perforators">
-                            <input class="promo-offers-slider-radio-btn" type="radio" id="drills" name="drills">
+                            <div class="promo-offers-slider-radio-inner">
+                                <input class="promo-offers-slider-radio-btn" type="radio" id="perforators"
+                                    name="perforators">
+                            </div>
+                            <div class="promo-offers-slider-radio-inner">
+                                <input class="promo-offers-slider-radio-btn" type="radio" id="drills" name="drills">
+                            </div>
                         </div>
                     </li>
                     <li class="promo-elements-benefit">
@@ -242,11 +247,11 @@
                 </div>
                 <ul class="products-catalog">
                     <li class="products-catalog-item">
-                        <div class="new-element-catalog visually-hidden"></div>
+                        <div class="new-element-catalog"></div>
                         <div class="products-catalog-item-top">
-                            <img class="visually-hidden" src="images/bosch-bfg-9000.png" width="184" height="164"
+                            <img class="products-catalog-item-top-img" src="images/bosch-bfg-9000.png" width="184" height="164"
                                 alt="Перфоратор BOSCH BFG 9000">
-                            <div class="products-catalog-item-buttons">
+                            <div class="products-catalog-item-buttons visually-hidden">
                                 <button type="button" class="products-catalod-buy-btn">Купить</button>
                                 <button type="button" class="products-catalod-cart-btn">В корзину</button>
                             </div>
@@ -258,7 +263,7 @@
                     <li class="products-catalog-item">
                         <div class="new-element-catalog"></div>
                         <div class="products-catalog-item-top">
-                            <img src="images/bosch-bfg-3000.png" width="127" height="112"
+                            <img class="products-catalog-item-top-img" src="images/bosch-bfg-3000.png" width="127" height="112"
                                 alt="Перфоратор BOSCH BFG 9000">
                             <div class="products-catalog-item-buttons visually-hidden">
                                 <button type="button" class="products-catalod-buy-btn">Купить</button>
@@ -272,7 +277,7 @@
                     <li class="products-catalog-item">
                         <div class="new-element-catalog visually-hidden"></div>
                         <div class="products-catalog-item-top">
-                            <img src="images/bosch-bfg-6000.png" width="144" height="128"
+                            <img class="products-catalog-item-top-img" src="images/bosch-bfg-6000.png" width="144" height="128"
                                 alt="Перфоратор BOSCH BFG 9000">
                             <div class="products-catalog-item-buttons visually-hidden">
                                 <button type="button" class="products-catalod-buy-btn">Купить</button>
@@ -286,7 +291,7 @@
                     <li class="products-catalog-item">
                         <div class="new-element-catalog"></div>
                         <div class="products-catalog-item-top">
-                            <img src="images/bosch-bfg-2000.png" width="127" height="112"
+                            <img class="products-catalog-item-top-img" src="images/bosch-bfg-2000.png" width="127" height="112"
                                 alt="Перфоратор BOSCH BFG 9000">
                             <div class="products-catalog-item-buttons visually-hidden">
                                 <button type="button" class="products-catalod-buy-btn">Купить</button>
@@ -408,6 +413,26 @@
                         alt="мы находимся по адресу Санкт-Петербург улица Большая Конюшенная дом 19 корпус 8">
                     <a class="about-office-btn" href="#">Заблудились? Напишите нам!</a>
                 </div>
+                <form class="about-form visually-hidden" action="" method="post" name="contact_form">
+                    <button class="form-close"></button>
+                    <div class="about-form-appeal">
+                        <div class="about-form-appeal-item">
+                            <h2 class="about-form-appeal-item-title">Ваше имя:</h2>
+                            <input class="about-form-appeal-item-pole" id="Form-btn-name" type="text" placeholder="Имя Фамилия">
+                        </div>
+                        <div class="about-form-appeal-item">
+                            <h2 class="about-form-appeal-item-title">Ваш e-mail:</h2>
+                            <input class="about-form-appeal-item-pole" id="Form-btn-email" type="email" placeholder="email@example.com">
+                        </div>
+                        <div class="about-form-appeal-item">
+                            <h2 class="about-form-appeal-item-title">Текст письма:</h2>
+                            <input class="about-form-appeal-item-pole-letter" id="Form-btn-text" type="text" placeholder="В свободной форме">
+                        </div>
+                    </div>
+                    <div class="about-form-post">
+                        <button type="submit" class="about-form-post-btn">Отправить</button>
+                    </div>
+                </form>
             </section>
         </div>
     </main>
@@ -470,6 +495,7 @@
             </div>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>

@@ -78,6 +78,10 @@ ul {
     overflow: hidden;
 }
 
+.cut-down {
+    display: none;
+}
+
 .header {
     background-color: rgba(0, 0, 0, 0.01);
     font-family: "Cuprum";
@@ -142,7 +146,7 @@ ul {
     fill: var(--basic-red);
     color: #000000;
     background-color: var(--white);
-    
+
 }
 
 .header-top-search:active {
@@ -473,11 +477,11 @@ main {
 }
 
 /*слайдер - перфораторы*/
-.promo-elements-perforators-slider   {
+.promo-elements-perforators-slider {
     height: 100%;
     background-image: url(images/perforators.png);
     background-repeat: no-repeat;
-    background-size: 100% 100%; 
+    background-size: 100% 100%;
 }
 
 /*слайдер - дрели*/
@@ -485,7 +489,7 @@ main {
     height: 100%;
     background-image: url(images/drills.png);
     background-repeat: no-repeat;
-    background-size: 100% 100%; 
+    background-size: 100% 100%;
 }
 
 .promo-elements-perforators-slider-inner {
@@ -543,8 +547,8 @@ main {
 .promo-offers-slider-btn-left {
     background-image: url(images/icons/icon-btn-left.svg);
     width: 22px;
-    height: 40px;		
-    border: none;	
+    height: 40px;
+    border: none;
     padding: 0;
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0);
@@ -554,7 +558,7 @@ main {
     background-image: url(images/icons/icon-btn-right.svg);
     width: 22px;
     height: 40px;
-    border: none;	
+    border: none;
     padding: 0;
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0);
@@ -564,15 +568,32 @@ main {
 .promo-offers-slider-radio {
     position: absolute;
     bottom: 35px;
+    display: flex;
     left: calc(50% - 20px);
+    width: 30px;
+    justify-content: space-between;
+}
+
+.promo-offers-slider-radio-inner {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
 }
 
 .promo-offers-slider-radio-btn {
     appearance: none;
-    border-radius: 50%;
-    width: 10px;
-    height: 10px;
-    background-color: var(--white);
+}
+
+.promo-offers-slider-radio-btn:checked {
+    width: 6px;
+    height: 6px;
+    background: var(--basic-red);
+    border-radius: 50px;
+    margin: 0;
 }
 
 /*блок с ссылкой на популярные товары и производителей*/
@@ -885,6 +906,7 @@ main {
     display: flex;
     margin-top: 70px;
     margin-bottom: 70px;
+    position: relative;
 }
 
 .about-delivery {
@@ -949,6 +971,131 @@ main {
     justify-content: center;
 }
 
+/*Форма*/
+.about-form {
+    position: absolute;
+    left: calc(50% - 310px);
+    width: 620px;
+    display: flex;
+    height: 423px;
+    border-top: 7px solid var(--basic-red);
+    background-color: var(--white);
+    justify-content: space-between;
+    flex-direction: column;
+    box-shadow: 0 0 13px 2px var(--basic-grey);
+    top: -60px;
+}
+
+.about-form-bounce {
+    animation-name: turin;
+    animation-duration: 0.6s;
+}
+
+@keyframes turin {
+    0% { transform: translateY(-200px); }
+    70% { transform: translateY(30px); }
+    90% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.about-form-error {
+    animation-name: turinlox;
+    animation-duration: 0.6s;
+}
+
+@keyframes turinlox {
+    0% { box-shadow: 0 0 20px 2px red; }
+    16% { box-shadow: 0 0 20px 2px grey; }
+    32% { box-shadow: 0 0 20px 2px red; }
+    48% { box-shadow: 0 0 20px 2px grey; }
+    64% { box-shadow: 0 0 20px 2px red; }
+    80% { box-shadow: 0 0 20px 2px grey; }
+    100% { box-shadow: 0 0 20px 2px red; }
+}
+
+.form-close {
+    width: 21px;
+    height: 21px;
+    background-image: url(images/icons/icon-close.svg);
+    background-repeat: no-repeat;
+    z-index: 1;
+    flex-shrink: 0;
+    margin-top: 14px;
+    padding: 0;
+    border: none;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+    margin-left: calc(100% - 32px);
+}
+
+.about-form-appeal {
+    height: 100%;
+    display: flex;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: 13px;
+    margin-bottom: 35px;
+    font-family: PTsans;
+    flex-wrap: wrap;
+    align-content: start;
+    column-gap: 20px;
+}
+
+.about-form-appeal-item {
+    flex-grow: 1;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-form-appeal-item-title {
+    margin: 0;
+    font-size: 18px;
+    line-height: 24px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.about-form-appeal-item-pole {
+    margin-top: 10px;
+    border: 2px solid var(--basic-grey);
+    border-radius: 2px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.about-form-appeal-item-pole-letter {
+    margin-top: 10px;
+    border: 2px solid var(--basic-grey);
+    border-radius: 2px;
+    padding: 10px;
+    padding-bottom: 75px;
+}
+
+.about-form-post {
+    justify-content: end;
+    width: 100%;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+}
+
+.about-form-post-btn {
+    background-color: var(--basic-red);
+    border: 0;
+    margin: 37px 80px 37px 37px;
+    width: 100%;
+    height: max-content;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: Cuprum;
+    font-size: 14px;
+    color: var(--white);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
 /*футер*/
 .footer {
     color: var(--white);
@@ -974,7 +1121,7 @@ main {
 
 .footer-company-name {
     background-color: var(--basic-red);
-    border: 0;  
+    border: 0;
     border-bottom: 5px solid rgb(181, 41, 51);
     text-transform: uppercase;
     padding: 20px 41px 25px 41px;
@@ -1019,6 +1166,15 @@ main {
     color: #FFD180;
 }
 
+.footer-navigation-secondary-link:hover {
+    text-decoration-line: underline;
+}
+
+.footer-navigation-secondary-link:active {
+    opacity: 0.3;
+    text-decoration-line: none
+}
+
 .footer-navigation-secondary-link:first-child {
     margin-left: 25px;
 }
@@ -1032,7 +1188,7 @@ main {
     display: flex;
     justify-content: space-between;
     padding-top: 35px;
-    padding-bottom: 15px;
+    padding-bottom: 35px;
 }
 
 .footer-bottom-copyright {
@@ -1093,4 +1249,3 @@ main {
     justify-content: center;
     align-items: center;
 }
-
