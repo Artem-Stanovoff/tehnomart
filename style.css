@@ -930,6 +930,10 @@ main {
     line-height: 24px;
 }
 
+.about-map {
+    cursor: pointer;
+}
+
 .about-list-item::before {
     content: url(images/icons/Object.svg);
     margin-right: 12px;
@@ -1013,7 +1017,7 @@ main {
     100% { box-shadow: 0 0 20px 2px red; }
 }
 
-.form-close {
+.btn-x-close {
     width: 21px;
     height: 21px;
     background-image: url(images/icons/icon-close.svg);
@@ -1094,6 +1098,31 @@ main {
     color: var(--white);
     text-transform: uppercase;
     cursor: pointer;
+}
+
+.about-map-iframe-box {
+    position: absolute;
+}
+
+.about-map-iframe {
+    position: relative;
+    overflow: hidden;
+    border-top: 7px solid var(--basic-red);
+    box-shadow: 0 0 13px 2px var(--basic-grey);
+}
+
+.btn-map-close {
+    width: 21px;
+    height: 21px;
+    position: absolute;
+    background-image: url(images/icons/icon-close.svg);
+    background-repeat: no-repeat;
+    padding: 0;
+    border: none;
+    color: inherit;
+    background-color: transparent;
+    cursor: pointer;
+    left: calc(100% + 15px);
 }
 
 /*футер*/
